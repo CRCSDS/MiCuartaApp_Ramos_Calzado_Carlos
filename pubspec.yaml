@@ -26,6 +26,8 @@ dependencies:
 
   video_player: ^0.10.5+2
 
+  animate_do: ^1.7.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

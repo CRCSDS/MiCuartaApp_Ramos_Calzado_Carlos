@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:animate_do/animate_do.dart';
 
 class ScrollPage extends StatefulWidget {
   @override
@@ -114,16 +115,19 @@ class _ScrollPageState extends State<ScrollPage> {
           Padding(
             padding: EdgeInsets.only(top: 40.0),
             child: Container(
-              child: Text("BRAVE THE BEYOND",
-                  style: Titulo, textAlign: TextAlign.center),
+              child: FadeInUp(
+                child: Text("BRAVE THE BEYOND",
+                    style: Titulo, textAlign: TextAlign.center),
+              ),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 10.0),
             child: Container(
+                child: FadeInUp(
               child: Text("The veil between life and death is no more...",
                   style: Subtitulo, textAlign: TextAlign.center),
-            ),
+            )),
           ),
           Padding(
             padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
@@ -137,20 +141,21 @@ class _ScrollPageState extends State<ScrollPage> {
           Padding(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
             child: Container(
-              child: Text(
-                  "With a single act of destruction, Sylvanas Windrunner has ripped open the way to the afterlife. Azeroth’s staunchest defenders have been dragged into all-consuming darkness.",
-                  style: Texto,
-                  textAlign: TextAlign.center),
-            ),
+                child: FadeInDown(
+                    child: Text(
+                        "With a single act of destruction, Sylvanas Windrunner has ripped open the way to the afterlife. Azeroth’s staunchest defenders have been dragged into all-consuming darkness.",
+                        style: Texto,
+                        textAlign: TextAlign.center))),
           ),
           Padding(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             child: Container(
+                child: FadeInDown(
               child: Text(
                   "An ancient force of death threatens to break its bonds and unravel reality. Hidden realms of wonder and horror await any who would pass to the other side. The Shadowlands is home to an entire realm of the departed; it is a world between worlds whose delicate balance preserves life and death itself.",
                   style: Texto,
                   textAlign: TextAlign.center),
-            ),
+            )),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 5.0),
@@ -256,26 +261,27 @@ class _ScrollPageState extends State<ScrollPage> {
           Padding(
             padding: EdgeInsets.only(top: 35.0),
             child: Container(
-              child: Text("THE SHADOWLANDS",
-                  style: Titulo, textAlign: TextAlign.center),
-            ),
+                child: ZoomIn(
+                    child: Text("THE SHADOWLANDS",
+                        style: Titulo, textAlign: TextAlign.center))),
           ),
           Padding(
             padding: EdgeInsets.only(top: 10.0),
             child: Container(
-              child: Text("NEW WORLD",
-                  style: Subtitulo, textAlign: TextAlign.center),
-            ),
+                child: ZoomIn(
+                    child: Text("NEW WORLD",
+                        style: Subtitulo, textAlign: TextAlign.center))),
           ),
           Padding(
             padding: EdgeInsets.only(
                 top: 20.0, left: 20.0, right: 20.0, bottom: 30.0),
             child: Container(
+                child: FadeIn(
               child: Text(
                   "What lies beyond the world you know? The Shadowlands, resting place for every mortal soul—virtuous or vile—that has ever lived. Journey through planes of torment and imprisonment to those of rebirth and eternal reward.",
                   style: Texto,
                   textAlign: TextAlign.center),
-            ),
+            )),
           ),
           /*AnimatedOpacity(
       opacity: _visible ? 1.0 : 0.0,
@@ -477,15 +483,19 @@ class _ScrollPageState extends State<ScrollPage> {
             textColor: Colors.white,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-              child: Text('LEARN MORE', style: TextStyle(fontSize: 20.0, color: Colors.orange,
-                fontWeight: FontWeight.bold,
-                shadows: <Shadow>[
-                  Shadow(
-                    offset: Offset(0.0, 1.0),
-                    blurRadius: 9.0,
-                    color: Colors.amber,
-                  ),
-                ],)),
+              child: Text('LEARN MORE',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.orange,
+                    fontWeight: FontWeight.bold,
+                    shadows: <Shadow>[
+                      Shadow(
+                        offset: Offset(0.0, 1.0),
+                        blurRadius: 9.0,
+                        color: Colors.amber,
+                      ),
+                    ],
+                  )),
             ),
             onPressed: () => Navigator.pushNamed(context, 'botones'),
           ),

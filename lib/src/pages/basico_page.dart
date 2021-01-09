@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:animate_do/animate_do.dart';
 
 //TODO: Pagina principal
 
@@ -146,6 +147,16 @@ class _BasicoPageState extends State<BasicoPage> {
     );
   }
 }
+
+
+/*
+Image.asset(
+'assets/Top.jpg',
+height: 100,
+width: 380,
+fit: BoxFit.fitWidth,
+),
+*/
 
 //
 
