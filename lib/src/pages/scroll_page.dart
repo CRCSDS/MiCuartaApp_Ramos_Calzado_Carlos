@@ -124,9 +124,11 @@ class _ScrollPageState extends State<ScrollPage> {
           Padding(
             padding: EdgeInsets.only(top: 10.0),
             child: Container(
-                child: FadeInUp(
+                child: FadeIn(
               child: Text("The veil between life and death is no more...",
                   style: Subtitulo, textAlign: TextAlign.center),
+                  duration: Duration(seconds: 2),
+                  delay: Duration(seconds: 1),
             )),
           ),
           Padding(
@@ -145,17 +147,22 @@ class _ScrollPageState extends State<ScrollPage> {
                     child: Text(
                         "With a single act of destruction, Sylvanas Windrunner has ripped open the way to the afterlife. Azeroth’s staunchest defenders have been dragged into all-consuming darkness.",
                         style: Texto,
-                        textAlign: TextAlign.center))),
+                        textAlign: TextAlign.center),
+                  delay: Duration(seconds: 2),
+                )
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 15.0, right: 15.0, bottom: 10.0),
             child: Container(
                 child: FadeInDown(
-              child: Text(
+                  child: Text(
                   "An ancient force of death threatens to break its bonds and unravel reality. Hidden realms of wonder and horror await any who would pass to the other side. The Shadowlands is home to an entire realm of the departed; it is a world between worlds whose delicate balance preserves life and death itself.",
                   style: Texto,
                   textAlign: TextAlign.center),
-            )),
+                  delay: Duration(seconds: 2),
+            )
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 5.0),
@@ -270,18 +277,24 @@ class _ScrollPageState extends State<ScrollPage> {
             child: Container(
                 child: ZoomIn(
                     child: Text("NEW WORLD",
-                        style: Subtitulo, textAlign: TextAlign.center))),
+                        style: Subtitulo, textAlign: TextAlign.center),
+                  delay: Duration(milliseconds: 500),
+                )
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(
                 top: 20.0, left: 20.0, right: 20.0, bottom: 30.0),
             child: Container(
                 child: FadeIn(
-              child: Text(
+                  child: Text(
                   "What lies beyond the world you know? The Shadowlands, resting place for every mortal soul—virtuous or vile—that has ever lived. Journey through planes of torment and imprisonment to those of rebirth and eternal reward.",
                   style: Texto,
                   textAlign: TextAlign.center),
-            )),
+                  delay: Duration(seconds: 1),
+                  duration: Duration(seconds: 1),
+            ),
+            ),
           ),
           /*AnimatedOpacity(
       opacity: _visible ? 1.0 : 0.0,
@@ -302,6 +315,7 @@ class _ScrollPageState extends State<ScrollPage> {
               width: 320.0,
             )
           ]),
+
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             RaisedButton(
               shape: RoundedRectangleBorder(
@@ -312,7 +326,9 @@ class _ScrollPageState extends State<ScrollPage> {
               color: Colors.black.withOpacity(0.2),
               textColor: Colors.lightBlueAccent,
             ),
+
             SizedBox(width: 10.0),
+
             RaisedButton(
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(20.0)),
@@ -323,9 +339,11 @@ class _ScrollPageState extends State<ScrollPage> {
               textColor: Colors.lightBlueAccent,
             )
           ]),
+
           Container(
               child: Icon(Icons.keyboard_arrow_down,
                   size: 50.0, color: Colors.white)),
+
           Padding(
             padding: EdgeInsets.only(top: 1.0),
             child: Image.asset(
@@ -433,9 +451,13 @@ class _ScrollPageState extends State<ScrollPage> {
           Padding(
             padding: EdgeInsets.only(top: 30.0, left: 3.0, right: 3.0),
             child: Container(
-              child: Text("DOMAINS FROM THE AFTERLIFE",
+              child: FadeIn(
+                child: Text("DOMAINS FROM THE AFTERLIFE",
                   style: Titulo, textAlign: TextAlign.center),
+                duration: Duration(seconds: 1),
+              ),
             ),
+
           ),
           Padding(
             padding: EdgeInsets.only(top: 10.0),
